@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+  color: black;
+  background-image: url(img/back.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contenedorJuego {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+canvas {
+  background-color: black;
+}
+
+#instrucciones {
+  font-size: 15px;
+  color: black;
+  margin-top: 5px;
+}
+
+span{
+  font-weight: bold;
+}
+
+#overlay, #overlayPuntuaciones, #modoJuego {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+#overlayPuntuaciones, #modoJuego{
+  border:2px solid orange;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  width: 250px;
+  font-weight: bold;
+  flex-direction: column;
+}
+
+
+.formulario {
+  background: white;
+  border:2px solid orange;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  width: 250px;
+}
+
+.formulario input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid orange;
+  border-radius: 25px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario button {
+  background: orange;
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+#modoJuego button {
+  background: orange;
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 25px;
+  margin-bottom: 15px;
+  width: 80%;
+}
+
+.formulario button:hover {
+  background: rgb(250, 193, 87);
+}
+
+#modoJuego button:hover {
+  background: rgb(250, 193, 87);
+}
+
+#overlay.active, #overlayPuntuaciones.active, #modoJuego.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+#overlayPuntuaciones h1 {
+  margin-bottom: 20px;
+}
+
+#puntuaciones {
+  margin-bottom: 20px;
+}
+
+#overlayPuntuaciones button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+
+

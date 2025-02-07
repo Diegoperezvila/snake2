@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <div id="instrucciones">Pulsa '<span>P</span>' para comenzar/pausar</div>
+    <div class="contenedorJuego">
+      <canvas id="juego"></canvas>
+    </div>
+    <div id="modoJuego">
+      <button id="facil">FÁCILL</button>
+      <button id="medio">MEDIO</button>
+      <button id="dificil">DIFICIL</button>
+      <button id="hardcore">HARDCORE</button>
+    </div>
+
+
+    <div id="overlayPuntuaciones">
+      <h1>TOP 10</h1>
+      <div id="puntuaciones"></div>
+      <button id="reiniciar">Reiniciar Juego</button>
+    </div>
+
+    <div id="overlay">
+      <div class="formulario">
+        <form>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="AAA"
+            minlength="3"
+            maxlength="3"
+            required
+          />
+          <input type="number" id="score" name="score" readonly />
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="programa.js"></script>
+  </body>
+</html>
